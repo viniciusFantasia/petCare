@@ -5,10 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pet Care</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style.css">
 </head>
 
 <body class="textocentralizado">
+<div id="fundo-externo">
+        <div id="fundo">
+            <img src="../imagens/vacina.jpg" alt="" />
+        </div>
+    </div>
+    <div id="site">
     <h1>Pet Care</h1>
     <h3>Cadastro de Vacinas</h3>
     <form name="form1" action="inserirvacinas.php" method="POST">
@@ -50,8 +56,8 @@
             foreach ($dados as $linha) {
                 echo "<tr><td>" . $linha["idvacina"] . "</td><td>" . $linha["descricao"] . "</td><td> " . $linha["idespecie"] . "</td>
                     <td> " . $linha["tempo"] . "</td>
-                    <td><a href='editarvacinas1.php?id=" . $linha["idvacina"] . "'>Editar</a> " .
-                    "<a href='excluirvacinas.php?id=" . $linha["idvacina"] . "'>Excluir</a></td>" .
+                    <td><a href='editarvacinas1.php?idvacinas=" . $linha["idvacina"] . "'>Editar</a> " .
+                    "<a href='excluirvacinas.php?idvacinas=" . $linha["idvacina"] . "'>Excluir</a></td>" .
                     "</tr>";
             }
             ?>
@@ -66,6 +72,7 @@
     ?>
     </br>
     <a href="../index.php">Voltar</a><br>
+    </div>
 </body>
 
 </html>

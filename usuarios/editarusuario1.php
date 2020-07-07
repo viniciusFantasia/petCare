@@ -9,6 +9,12 @@
 </head>
 
 <body class="textocentralizado">
+<div id="fundo-externo">
+        <!-- <div id="fundo">
+            <img src="imagens/usuario.png" alt="" />
+        </div> -->
+    </div>
+    <div id="site">
     <h1>Pet Care</h1>
     <?php
     session_start();
@@ -41,6 +47,7 @@
     }
     ?>
     <a href="../index.php">Voltar</a><br>
+    </div>
 </body>
 
 </html>

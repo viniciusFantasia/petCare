@@ -9,6 +9,12 @@
 </head>
 
 <body class="textocentralizado">
+<div id="fundo-externo">
+        <div id="fundohome">
+            <img src="imagens/petcare.png" alt="" />
+        </div>
+    </div>
+    <div id="site">
     <h1>Pet Care</h1>
     <h3 >Login</h3>
     <?php
@@ -23,6 +29,7 @@
     </form>
     <a href='usuarios/cadusuario.php'>Cadastre-se</a></br>
     <a href="index.php">Voltar</a><br>
+    </div>
 </body>
 
 </html>

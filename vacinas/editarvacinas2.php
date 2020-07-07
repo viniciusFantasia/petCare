@@ -9,6 +9,12 @@
 </head>
 
 <body class="textocentralizado">
+<div id="fundo-externo">
+        <div id="fundo">
+            <img src="../imagens/usuario.jpg" alt="" />
+        </div>
+    </div>
+    <div id="site">
     <h1>Pet Care</h1>
     <h3>Dados</h3>
     <?php
@@ -39,6 +45,7 @@
     <br>
     <a href="cadvacina.php">Voltar</a><br>
     <a href="../index.php">Home</a><br>
+    </div>
 </body>
 
 </html>

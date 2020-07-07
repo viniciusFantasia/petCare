@@ -1,0 +1,66 @@
+body {
+    background-color: white;
+    color: black;
+    margin: 30px 30px 30px 30px;
+    padding: 30px 30px 30px 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+/* .textocentralizado {
+    text-align: center;
+} */
+
+tr,
+td,
+th,
+table {
+    border: solid black 1px;
+    border-collapse: collapse;
+    margin: 30px 30px 30px 30px;
+}
+
+#fundo-externo {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+#fundo {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+
+#fundohome {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+
+#fundo img {
+    width: 100%;
+    position: absolute;
+}
+
+#fundohome img {
+    margin-left: 600px;
+    width: 50%;
+    position: absolute;
+}
+
+#site {
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    width: 560px;
+    padding: 20px;
+    margin-left: -700px;
+    /* por causa do posicionamento absoluto temos que usar margem negativa para centralizar o site */
+    margin-top: 0px;
+    background: #FFF;
+    /* fundo branco para navegadores que não suportam rgba */
+    background: rgba(255, 255, 255, 0.8);
+    /* fundo branco com um pouco de transparência */
+}
