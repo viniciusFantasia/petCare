@@ -29,6 +29,7 @@
             echo "<p>Erro ao receber dados</p>";
             echo "<a href='http://localhost/pet/procedimento/cadproc.php'>Voltar</a>";
         }
+        
    
    /* }else {
         echo "<h3>Se gostou das obras, cadastre-se para realizar empréstimos!</h3>";
@@ -38,6 +39,9 @@
         echo "<a href='index.html'>Home</a><br>";
     }*/
     ?>
+    <?php
+header('Location: http://localhost/pet/procedimento/cadproc.php');
+?>
 </body>
 
 </html>

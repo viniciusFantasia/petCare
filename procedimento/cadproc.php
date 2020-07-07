@@ -56,7 +56,9 @@
         <th>Status</th>
     </tr>
     <?php
-        $sql="Select distinct p.* 
+        $sql="Select distinct p.*,
+                    e.descricao as especie,
+                    s.descricao as status
               From procedimento p 
               join especie e 
               on e.idespecie = p.idespecie 
@@ -70,8 +72,8 @@
             echo "<tr>
             <td>".$linha["idprocedimento"]."</td>
             <td>".$linha["descricao"]."</td>
-            <td> ".$linha["idespecie"]."</td>".
-            "<td>".$linha["idstatus"]."</td>".
+            <td> ".$linha["especie"]."</td>".
+            "<td>".$linha["status"]."</td>".
             "<td><a href='editarproc1.php?id=".$linha["idprocedimento"]."'><i class='fa fa-pencil'></i></a> ".
             "&nbsp;<a href='excluirproc.php?id=".$linha["idprocedimento"]."'><i class='fa fa-trash'></i></a></td>".
             "</tr>"; 
