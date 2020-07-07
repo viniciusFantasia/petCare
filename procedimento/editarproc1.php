@@ -61,6 +61,6 @@ if (isset($_GET['id'])) {
         echo "<a href='cadproc.php'>Voltar</a>";
     }
 ?>
-    <a href="pet/index.html">Voltar</a><br>
+    <a href="http://localhost/pet/index.php">Voltar</a><br>
 </body>
 </html>
