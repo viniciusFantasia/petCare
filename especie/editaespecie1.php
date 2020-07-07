@@ -9,8 +9,16 @@
 </head>
 
 <body>
+<div id="fundo-externo">
+        <div id="fundo">
+            <img src="../imagens/cachorros.jpg" alt="" />
+        </div>
+    </div>
+    <div id="site">
     <h1>Pet Care</h1>
     <?php
+    session_start();
+    if (isset($_SESSION["logado"]) && $_SESSION["logado"] == 'sim') {
         if (isset($_GET['id'])) {
             $id = $_GET['id'];
             $sql = "Select * from especie where idespecie=$id";
@@ -37,6 +45,15 @@
     ?>
     <a href="cadespecie.php">Voltar</a><br>
     <a href="index.php">Home</a><br>
+    <?php
+            }
+        
+    else {
+        echo "<p>Você não possui acesso.</p>";
+        echo "<a href='login.php'>Faça o login</a>";
+    }
+    ?>
+    </div>
 </body>
 
 </html>
