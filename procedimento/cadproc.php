@@ -9,7 +9,6 @@
 </head>
 <body>
     <h1 class="textocentralizado">Cadastro de Procedimento</h1>
-<!-- Colocar validação -->
 <?php
     session_start();
     if (isset($_SESSION["logado"]) && $_SESSION["logado"] == 'sim') {

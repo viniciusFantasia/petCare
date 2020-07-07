@@ -34,10 +34,10 @@
             echo "  ou  ";
             echo "<a href='login.php'>Faça o login</a>";
         }
+    }
         ?>
         </table>
         <a href="index.php">Voltar</a><br>
     </div>
 </body>
-
 </html>
