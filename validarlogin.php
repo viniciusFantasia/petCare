@@ -26,6 +26,7 @@
                 $_SESSION["nomeusuario"] = $linha['nome'];
                 echo "<p>Seja vem vindo(a) " . $_SESSION["nomeusuario"] . " !</p><br>";
                 echo "<a href='cadusuario.php'>Lista de Usuários</a><br>";
+                echo "<a href='vacinas/cadvacinas.php'>Vacinas</a><br>";
             }
         } else {
             $_SESSION["logado"] = 'não';

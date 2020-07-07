@@ -18,6 +18,8 @@
     if(isset($_SESSION["logado"]) && $_SESSION["logado"] == 'sim'){
     ?>
     <?php 
+    echo "<a href='usuarios/cadusuario.php'>Lista de Usuários</a><br>";
+    echo "<a href='vacinas/cadvacinas.php'>Vacinas</a><br>";
     } else {
         echo "<a href='usuarios/cadusuario.php'>Cadastre-se</a><br>";
     }
