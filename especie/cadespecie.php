@@ -4,12 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro de Espécies</title>
+    <title>Pet Care</title>
 </head>
 
 <body>
     <h1>PET CARE</h1>
     <h3>Cadastro de Espécies</h3>
+    <?php
+    session_start();
+    if (isset($_SESSION["logado"]) && $_SESSION["logado"] == 'sim') {
+?>
         <form name="form1" action="insereespecie.php" method="POST">
             <label>Espécie</label><br><input type="text" name="nomeespecie" value="" placeholder="Digite a especie" required><br><br>
             <label>Descrição</label><br><input type="text" name="descricao" value="" placeholder="Descreva a especie"><br><br>
@@ -39,7 +43,14 @@
                 "</tr>";
         }
         ?>
-
+<?php
+            }
+        
+     else {
+        echo "<p>Você não possui acesso.</p>";
+        echo "<a href='login.php'>Faça o login</a>";
+    }
+    ?>
     </table>
 </body>
 
