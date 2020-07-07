@@ -26,7 +26,7 @@
     ?>
     <br>
     <a href="cadusuario.php">Voltar</a><br>
-    <a href="index.php">Home</a><br>
+    <a href="../index.php">Home</a><br>
 </body>
 
 </html>

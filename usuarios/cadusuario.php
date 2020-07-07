@@ -18,7 +18,7 @@
         <input type="submit" value="Enviar">
         <input type="reset" value="Cancelar">
     </form><br>
-    <a href="index.php">Voltar</a><br>
+    <a href="../index.php">Voltar</a><br>
     <?php
     session_start();
     if (isset($_SESSION["logado"]) && $_SESSION["logado"] == 'sim') {
