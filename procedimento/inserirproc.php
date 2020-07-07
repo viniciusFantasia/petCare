@@ -24,10 +24,10 @@
             require_once "conexao.php";
             $conn->exec($sql);
             echo "<p>Salvo com sucesso</p>";
-            echo "<a href='index.php'>Voltar</a>";       
+            echo "<a href='http://localhost/pet/procedimento/cadproc.php'>Voltar</a>";       
         } else {
             echo "<p>Erro ao receber dados</p>";
-            echo "<a href='cadproc.php'>Voltar</a>";
+            echo "<a href='http://localhost/pet/procedimento/cadproc.php'>Voltar</a>";
         }
    
    /* }else {

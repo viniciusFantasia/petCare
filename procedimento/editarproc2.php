@@ -12,9 +12,9 @@
     <?php
    # session_start();
     #if (isset($_SESSION["logado"]) && $_SESSION["logado"] == 'sim') {
-        if (isset($_POST['idprocedimento']) || isset($_POST['descricao'])
+        if (isset($_POST['id']) || isset($_POST['descricao'])
         && isset($_POST['especie']) && isset($_POST['status'])){
-            $idprocedimento=$_POST['idprocedimento'];
+            $idprocedimento=$_POST['id'];
             $descricao=$_POST['descricao'];
             $especie=$_POST['especie'];
             $status=$_POST['status'];
@@ -25,10 +25,10 @@
             require_once "conexao.php";
             $conn->exec($sql);
             echo "<p>Salvo com sucesso</p>";
-            echo "<a href='http://localhost/pet/index.php'>Voltar</a>";
+            echo "<a href='http://localhost/pet/procedimento/cadproc.php'>Voltar</a>";
         } else {
             echo "<p>Erro ao receber dados</p>";
-            echo "<a href='cadproc.php'>Voltar</a>";
+            echo "<a href='http://localhost/pet/procedimento/cadproc.php'>Voltar</a>";
         }
     /*}else {
         echo "<h3>Se gostou das obras, cadastre-se para realizar empréstimos!</h3>";
