@@ -9,6 +9,12 @@
 </head>
 
 <body>
+<div id="fundo-externo">
+        <div id="fundo">
+            <img src="../imagens/cachorros.jpg" alt="" />
+        </div>
+    </div>
+    <div id="site">
     <h1>Pet Care</h1>
     <?php
     session_start();
@@ -47,6 +53,7 @@
         echo "<a href='login.php'>Faça o login</a>";
     }
     ?>
+    </div>
 </body>
 
 </html>

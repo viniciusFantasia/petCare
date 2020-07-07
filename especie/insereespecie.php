@@ -8,6 +8,12 @@
 </head>
 
 <body>
+<div id="fundo-externo">
+        <div id="fundo">
+            <img src="../imagens/cachorros.jpg" alt="" />
+        </div>
+    </div>
+    <div id="site">
     <h1>PET CARE</h1>
     <h3>Cadastro de Espécies</h3>
     <?php
@@ -38,6 +44,7 @@
         echo "<a href='login.php'>Faça o login</a>";
     }
     ?>
+    </div>
 </body>
 
 </html>

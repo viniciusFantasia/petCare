@@ -9,6 +9,12 @@
 </head>
 
 <body>
+<div id="fundo-externo">
+        <div id="fundo">
+            <img src="../imagens/cachorros.jpg" alt="" />
+        </div>
+    </div>
+    <div id="site">
     <?php
     session_start();
     if (isset($_SESSION["logado"]) && $_SESSION["logado"] == 'sim') {
@@ -32,6 +38,7 @@
         echo "<a href='login.php'>Faça o login</a>";
     }
     ?>
+    </div>
 </body>
 
 </html>
