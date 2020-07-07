@@ -17,7 +17,7 @@
             <input type="reset" value="Cancelar">
         </form>
     
-    <br><a href='petCare/vacinas/index.php'>Voltar</a>
+    <br><a href='index.php'>Voltar</a>
     <h3>-----------------------------------------------------------------------------------------------------------------------------<br><br>Pessoas Cadastradas</h3>
 
     <table>

@@ -8,26 +8,21 @@
 </head>
 
 <body>
-    <h1>PET CARE</h1>
-    <h3>Cadastro de Espécies</h3>
     <?php
         if (isset($_POST['nomeespecie']) && isset($_POST['descricao'])) {
+            $id = $_POST['idespecie'];
             $nomeespecie = $_POST['nomeespecie'];
             $descricao = $_POST['descricao'];
-            echo "<p> Espécie: $nomeespecie</p>";
-            echo "<p>Descrição: $descricao</p>";
-
-            // montar instrução SQL
-            $sql = "insert into especie (nomeespecie, descricao) values('$nomeespecie', '$descricao')";
-            //echo $sql;
+            $sql = "update especie set nomeespecie='$nomeespecie', descricao='$descricao' where idespecie=$id";
             require_once "conexao.php";
             $conn->exec($sql);
-            echo "<p>Salvo com sucesso!</p>";
+            echo "<p>Atualizado com sucesso!</p>";
+            echo "<a href='cadespecie.php'>Voltar</a>";
+            echo "<a href='index.php'>Home</a><br>";
         } else {
             echo "<p>Erro ao receber os dados.</p>";
         }
-        echo "<a href='cadespecie.php?'>Novo Cadastro</a>";
-        echo " <a href='index.php'>Home</a><br>";
+     
     ?>
 </body>
 
