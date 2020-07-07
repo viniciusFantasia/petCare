@@ -19,7 +19,7 @@
     ?>
     <?php 
     } else {
-        echo "<a href='cadusuario.php'>Cadastre-se</a><br>";
+        echo "<a href='usuarios/cadusuario.php'>Cadastre-se</a><br>";
     }
     ?>
     <a href="login.php">Acesse o sistema</a><br>
