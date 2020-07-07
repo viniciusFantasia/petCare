@@ -26,7 +26,6 @@
             $conn->exec($sql);
             echo "<p>Salvo com sucesso</p>";
             echo "<a href='http://localhost/pet/procedimento/cadproc.php'>Voltar</a>"; 
-            echo "<script type='javascript'>alert('Email enviado com Sucesso!')";
             header('Location: http://localhost/pet/procedimento/cadproc.php');
               
         } else {

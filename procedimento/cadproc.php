@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Minha biblioteca</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
@@ -15,8 +15,8 @@
 ?>
     <h3>Cadastre seu procedimento</h3>
     <form name="form1" action="inserirproc.php" method="POST">
-    <label>Descrição</label><input type="text" name="descricao" value="" placeholder="Digite a descrição" required><br><br>
-    <label>Espécie</label>
+    <label>Descrição</label><br><input type="text" name="descricao" value="" placeholder="Digite a descrição" required><br><br>
+    <label>Espécie</label><br>
     <select name="especie">
     <?php
     $sql="Select * from especie order by idespecie";
@@ -30,7 +30,7 @@
     ?>
     </select><br><br>  
       
-    <label>Status</label>
+    <label>Status</label><br>
     <select name="status">
     <?php
     $sql="Select * from status order by idstatus";
@@ -43,8 +43,6 @@
     }
     ?>
     </select><br><br> 
-
-    <br><br>
     <input type="submit" value="Enviar">
     <input type="reset" value="Cancelar">
 </form>

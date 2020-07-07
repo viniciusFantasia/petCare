@@ -18,6 +18,7 @@
          require_once "conexao.php";
          $conn->exec($sql);
          echo "<p>Procedimento excluido com sucesso</p>";
+         header('Location: http://localhost/pet/procedimento/cadproc.php');
          echo "<a href='cadproc.php'>Voltar</a>";       
         } else {
             echo "<p>Erro ao receber dados</p>";
