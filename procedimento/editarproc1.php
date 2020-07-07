@@ -9,6 +9,8 @@
 <body>
 <h1 class="textocentralizado">Edição de Procedimento</h1>
 <?php
+session_start();
+if (isset($_SESSION["logado"]) && $_SESSION["logado"] == 'sim') {
 if (isset($_GET['id'])) {
     $idprocedimento = $_GET['id'];
         $sql = "Select * 
@@ -60,7 +62,12 @@ if (isset($_GET['id'])) {
         echo "<p>Erro ao receber dados</p>";
         echo "<a href='cadproc.php'>Voltar</a>";
     }
-?>
-    <a href="http://localhost/pet/index.php">Voltar</a><br>
+    } else {
+        echo "<p>Você precisa estar logado para realizar esta ação!</p>";
+        echo "<a href='../cadusuario.php'>Cadastre-se</a>";
+        echo "  ou  ";
+        echo "<a href='../login.php'>Faça o login</a>";
+    }
+    ?>
 </body>
 </html>

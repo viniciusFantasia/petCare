@@ -10,7 +10,10 @@
 <body>
     <h1 class="textocentralizado">Cadastro de Procedimento</h1>
 <!-- Colocar validação -->
-
+<?php
+    session_start();
+    if (isset($_SESSION["logado"]) && $_SESSION["logado"] == 'sim') {
+?>
     <h3>Cadastre seu procedimento</h3>
     <form name="form1" action="inserirproc.php" method="POST">
     <label>Descrição</label><input type="text" name="descricao" value="" placeholder="Digite a descrição" required><br><br>
@@ -79,5 +82,16 @@
             "</tr>"; 
         }
 ?>
+    <?php
+    } else {
+        echo "<p>Você precisa estar logado para realizar esta ação!</p>";
+        echo "<a href='../cadusuario.php'>Cadastre-se</a>";
+        echo "  ou  ";
+        echo "<a href='../login.php'>Faça o login</a>";
+    }
+    ?>
+    </br>
+    <a href="../index.php">Voltar</a><br>
+</body>
 </body>
 </html>
