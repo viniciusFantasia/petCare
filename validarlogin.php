@@ -29,19 +29,15 @@
                 echo "<a href='http://localhost/pet/procedimento/cadproc.php'>Procedimentos</a><br>";
             }
         } else {
-            $_SESSION["logado"] = 'não';
-            $_SESSION["idusuario"] = 0;
-            echo "<p>Usuário ou senha inválidos.</p>";
+            echo "<p>Erro ao receber dados</p>";
+            echo "<a href='usuarios/cadusuario.php'>Cadastre-se</a>";
+            echo "  ou  ";
+            echo "<a href='login.php'>Faça o login</a>";
         }
-    } else {
-        echo "<p>Erro ao receber dados</p>";
-        echo "<a href='usuarios/cadusuario.php'>Cadastre-se</a>";
-        echo "  ou  ";
-        echo "<a href='login.php'>Faça o login</a>";
-    }
-    ?>
-    </table>
-    <a href="index.php">Voltar</a><br>
+        ?>
+        </table>
+        <a href="index.php">Voltar</a><br>
+    </div>
 </body>
 
 </html>

@@ -9,6 +9,12 @@
 </head>
 
 <body class="textocentralizado">
+<div id="fundo-externo">
+        <!-- <div id="fundo">
+            <img src="imagens/usuario.png" alt="" />
+        </div> -->
+    </div>
+    <div id="site">
     <h1>Pet Care</h1>
     <?php
     if (isset($_GET['idusuario'])) {
@@ -26,7 +32,8 @@
     ?>
     <br>
     <a href="cadusuario.php">Voltar</a><br>
-    <a href="index.php">Home</a><br>
+    <a href="../index.php">Home</a><br>
+    </div>
 </body>
 
 </html>
