@@ -5,14 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pet Care</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style.css">
 </head>
 
 <body class="textocentralizado">
 <div id="fundo-externo">
-        <!-- <div id="fundo">
+        <div id="fundo">
             <img src="imagens/usuario.png" alt="" />
-        </div> -->
+        </div>
     </div>
     <div id="site">
     <h1>Pet Care</h1>
