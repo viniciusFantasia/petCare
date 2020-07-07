@@ -4,31 +4,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro de Espécie</title>
+    <title>Pet Care</title>
+
 </head>
 
 <body>
+    <h1>Pet Care</h1>
     <?php
-        if (isset($_GET['idespecie'])) {
-            $id = $_GET['idespecie'];
-            $sql = "select * from especie where idespecie=$id";
+        if (isset($_GET['id'])) {
+            $id = $_GET['id'];
+            $sql = "Select * from especie where idespecie=$id";
             require_once "conexao.php";
             $result = $conn->query($sql);
             $dados = $result->fetchAll(PDO::FETCH_ASSOC);
             foreach ($dados as $linha) { ?>
                 <form name="form1" action="editaespecie2.php" method="POST">
-                    ID<br><?php echo $linha['idespecie']; ?><br>
-                    <input type="hidden" name="idespecie" value="<?php echo $linha['idespecie']; ?>"><br>
-                    Espécie<br><input type="text" name="nomeespecie" value="<?php echo $linha['nomeespecie']; ?>" placeholder="Digite a especie" required><br><br>
-                    Descrição<br><input type="text" name="descricao" value="<?php echo $linha['desricao']; ?>" placeholder="Descreva a especie" ><br><br>
-                    <input type="submit" value="Enviar">
+                    <label>Id: </label><?php echo $linha['idespecie']; ?> <br>
+                    <input type="hidden" name="idespecie" value="<?php echo $linha['idespecie']; ?>">
+                    <label>Nome</label>
+                    <input type="text" name="nomeespecie" value="<?php echo $linha['nomeespecie']; ?>" placeholder="Digite o nome da especie" required><br><br>
+                    <label>Descrição</label>
+                    <input type="text" name="descricao" value="<?php echo $linha['descricao']; ?>" placeholder="Descreva a especie" required><br><br>
+                    <input type="submit" value="Salvar">
                     <input type="reset" value="Cancelar">
                 </form>
     <?php
             }
         }
-    
+     else {
+        echo "<p>Erro ao receber dados</p>";
+    }
     ?>
+    <a href="cadespecie.php">Voltar</a><br>
+    <a href="index.php">Home</a><br>
 </body>
 
 </html>
